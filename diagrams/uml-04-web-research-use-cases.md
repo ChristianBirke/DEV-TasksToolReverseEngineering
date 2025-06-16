@@ -13,110 +13,110 @@ This UML use case diagram represents how users interact with Vectal's AI-powered
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
-    ResearchUser[👤<br/>Research User]
-    UltraSearchAI[🔍<br/>Ultra Search AI]
-    ExternalAPIs[🌐<br/>External APIs]
+    ResearchUser["👤<br/>Research User"]
+    UltraSearchAI["🔍<br/>Ultra Search AI"]
+    ExternalAPIs["🌐<br/>External APIs"]
     
     %% System boundary
     subgraph SystemBoundary["🔍 Vectal Ultra Search System"]
         %% Primary Use Cases
-        RequestResearch((Request<br/>Research))
-        ReviewResearchResults((Review Research<br/>Results))
-        IntegrateFindings((Integrate<br/>Findings))
-        ManageResearchHistory((Manage Research<br/>History))
+        RequestResearch["Request<br/>Research"]
+        ReviewResearchResults["Review Research<br/>Results"]
+        IntegrateFindings["Integrate<br/>Findings"]
+        ManageResearchHistory["Manage Research<br/>History"]
         
         %% Research Execution Use Cases
-        ExecuteWebSearch((Execute Web<br/>Search))
-        SynthesizeInformation((Synthesize<br/>Information))
-        ValidateSources((Validate<br/>Sources))
-        GenerateResearchReport((Generate Research<br/>Report))
+        ExecuteWebSearch["Execute Web<br/>Search"]
+        SynthesizeInformation["Synthesize<br/>Information"]
+        ValidateSources["Validate<br/>Sources"]
+        GenerateResearchReport["Generate Research<br/>Report"]
         
         %% AI Agent Use Cases
-        AnalyzeResearchQuery((Analyze Research<br/>Query))
-        FormulateSearchStrategy((Formulate Search<br/>Strategy))
-        CrawlWebContent((Crawl Web<br/>Content))
-        ProcessSearchResults((Process Search<br/>Results))
+        AnalyzeResearchQuery["Analyze Research<br/>Query"]
+        FormulateSearchStrategy["Formulate Search<br/>Strategy"]
+        CrawlWebContent["Crawl Web<br/>Content"]
+        ProcessSearchResults["Process Search<br/>Results"]
         
         %% Supporting Use Cases
-        ConfigureResearchScope((Configure Research<br/>Scope))
-        SetResearchConstraints((Set Research<br/>Constraints))
-        FollowCitations((Follow<br/>Citations))
-        ExportResearchData((Export Research<br/>Data))
-        ShareResearchFindings((Share Research<br/>Findings))
+        ConfigureResearchScope["Configure Research<br/>Scope"]
+        SetResearchConstraints["Set Research<br/>Constraints"]
+        FollowCitations["Follow<br/>Citations"]
+        ExportResearchData["Export Research<br/>Data"]
+        ShareResearchFindings["Share Research<br/>Findings"]
         
         %% Quality Control Use Cases
-        VerifySourceCredibility((Verify Source<br/>Credibility))
-        CheckFactAccuracy((Check Fact<br/>Accuracy))
-        DetectSourceBias((Detect Source<br/>Bias))
-        EvaluateInformationRelevance((Evaluate Information<br/>Relevance))
+        VerifySourceCredibility["Verify Source<br/>Credibility"]
+        CheckFactAccuracy["Check Fact<br/>Accuracy"]
+        DetectSourceBias["Detect Source<br/>Bias"]
+        EvaluateInformationRelevance["Evaluate Information<br/>Relevance"]
         
         %% Integration Use Cases
-        LinkToTasks((Link Research<br/>to Tasks))
-        EnhanceDocuments((Enhance Documents<br/>with Research))
-        TriggerAutonomousResearch((Trigger Autonomous<br/>Research))
-        UpdateKnowledgeBase((Update Knowledge<br/>Base))
+        LinkToTasks["Link Research<br/>to Tasks"]
+        EnhanceDocuments["Enhance Documents<br/>with Research"]
+        TriggerAutonomousResearch["Trigger Autonomous<br/>Research"]
+        UpdateKnowledgeBase["Update Knowledge<br/>Base"]
     end
     
     %% Primary Actor Associations
-    ResearchUser ---|o RequestResearch
-    ResearchUser ---|o ReviewResearchResults
-    ResearchUser ---|o IntegrateFindings
-    ResearchUser ---|o ManageResearchHistory
-    ResearchUser ---|o ConfigureResearchScope
-    ResearchUser ---|o SetResearchConstraints
-    ResearchUser ---|o FollowCitations
-    ResearchUser ---|o ExportResearchData
-    ResearchUser ---|o ShareResearchFindings
-    ResearchUser ---|o LinkToTasks
-    ResearchUser ---|o EnhanceDocuments
+    ResearchUser --- RequestResearch
+    ResearchUser --- ReviewResearchResults
+    ResearchUser --- IntegrateFindings
+    ResearchUser --- ManageResearchHistory
+    ResearchUser --- ConfigureResearchScope
+    ResearchUser --- SetResearchConstraints
+    ResearchUser --- FollowCitations
+    ResearchUser --- ExportResearchData
+    ResearchUser --- ShareResearchFindings
+    ResearchUser --- LinkToTasks
+    ResearchUser --- EnhanceDocuments
     
     %% Secondary Actor Associations (Ultra Search AI)
-    UltraSearchAI ---|o ExecuteWebSearch
-    UltraSearchAI ---|o SynthesizeInformation
-    UltraSearchAI ---|o ValidateSources
-    UltraSearchAI ---|o GenerateResearchReport
-    UltraSearchAI ---|o AnalyzeResearchQuery
-    UltraSearchAI ---|o FormulateSearchStrategy
-    UltraSearchAI ---|o CrawlWebContent
-    UltraSearchAI ---|o ProcessSearchResults
-    UltraSearchAI ---|o VerifySourceCredibility
-    UltraSearchAI ---|o CheckFactAccuracy
-    UltraSearchAI ---|o DetectSourceBias
-    UltraSearchAI ---|o EvaluateInformationRelevance
-    UltraSearchAI ---|o TriggerAutonomousResearch
-    UltraSearchAI ---|o UpdateKnowledgeBase
+    UltraSearchAI --- ExecuteWebSearch
+    UltraSearchAI --- SynthesizeInformation
+    UltraSearchAI --- ValidateSources
+    UltraSearchAI --- GenerateResearchReport
+    UltraSearchAI --- AnalyzeResearchQuery
+    UltraSearchAI --- FormulateSearchStrategy
+    UltraSearchAI --- CrawlWebContent
+    UltraSearchAI --- ProcessSearchResults
+    UltraSearchAI --- VerifySourceCredibility
+    UltraSearchAI --- CheckFactAccuracy
+    UltraSearchAI --- DetectSourceBias
+    UltraSearchAI --- EvaluateInformationRelevance
+    UltraSearchAI --- TriggerAutonomousResearch
+    UltraSearchAI --- UpdateKnowledgeBase
     
     %% Supporting Actor Associations
-    ExternalAPIs ---|o ExecuteWebSearch
-    ExternalAPIs ---|o CrawlWebContent
-    ExternalAPIs ---|o VerifySourceCredibility
+    ExternalAPIs --- ExecuteWebSearch
+    ExternalAPIs --- CrawlWebContent
+    ExternalAPIs --- VerifySourceCredibility
     
     %% Include Relationships
-    RequestResearch -.->|<<include>>| AnalyzeResearchQuery
-    RequestResearch -.->|<<include>>| ConfigureResearchScope
-    ExecuteWebSearch -.->|<<include>>| FormulateSearchStrategy
-    SynthesizeInformation -.->|<<include>>| ValidateSources
-    GenerateResearchReport -.->|<<include>>| VerifySourceCredibility
-    ReviewResearchResults -.->|<<include>>| FollowCitations
+    RequestResearch -.-> AnalyzeResearchQuery
+    RequestResearch -.-> ConfigureResearchScope
+    ExecuteWebSearch -.-> FormulateSearchStrategy
+    SynthesizeInformation -.-> ValidateSources
+    GenerateResearchReport -.-> VerifySourceCredibility
+    ReviewResearchResults -.-> FollowCitations
     
     %% Extend Relationships
-    RequestResearch -.->|<<extend>>| SetResearchConstraints
-    ExecuteWebSearch -.->|<<extend>>| CrawlWebContent
-    ValidateSources -.->|<<extend>>| CheckFactAccuracy
-    ValidateSources -.->|<<extend>>| DetectSourceBias
-    IntegrateFindings -.->|<<extend>>| LinkToTasks
-    IntegrateFindings -.->|<<extend>>| EnhanceDocuments
-    ManageResearchHistory -.->|<<extend>>| ExportResearchData
-    ReviewResearchResults -.->|<<extend>>| ShareResearchFindings
+    RequestResearch -.-> SetResearchConstraints
+    ExecuteWebSearch -.-> CrawlWebContent
+    ValidateSources -.-> CheckFactAccuracy
+    ValidateSources -.-> DetectSourceBias
+    IntegrateFindings -.-> LinkToTasks
+    IntegrateFindings -.-> EnhanceDocuments
+    ManageResearchHistory -.-> ExportResearchData
+    ReviewResearchResults -.-> ShareResearchFindings
     
     %% Generalization
-    IntegrateFindings ---|> LinkToTasks
-    IntegrateFindings ---|> EnhanceDocuments
-    IntegrateFindings ---|> UpdateKnowledgeBase
+    IntegrateFindings --- LinkToTasks
+    IntegrateFindings --- EnhanceDocuments
+    IntegrateFindings --- UpdateKnowledgeBase
     
-    ValidateSources ---|> VerifySourceCredibility
-    ValidateSources ---|> CheckFactAccuracy
-    ValidateSources ---|> DetectSourceBias
+    ValidateSources --- VerifySourceCredibility
+    ValidateSources --- CheckFactAccuracy
+    ValidateSources --- DetectSourceBias
     
     %% Styling
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px

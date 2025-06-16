@@ -13,85 +13,85 @@ This UML use case diagram represents Vectal's flagship capability where users ca
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
-    AgentUser[👤<br/>Agent User]
-    AutonomousAgent[🤖<br/>Autonomous Agent]
-    ExternalServices[🌐<br/>External Services]
+    AgentUser["👤<br/>Agent User"]
+    AutonomousAgent["🤖<br/>Autonomous Agent"]
+    ExternalServices["🌐<br/>External Services"]
     
     %% System boundary
     subgraph SystemBoundary["🎯 Vectal Autonomous Agent System"]
         %% Primary Use Cases
-        DefineGoal((Define<br/>Agent Goal))
-        MonitorAgent((Monitor Agent<br/>Progress))
-        ControlAgent((Control Agent<br/>Operations))
-        ReviewResults((Review Agent<br/>Results))
+        DefineGoal["Define<br/>Agent Goal"]
+        MonitorAgent["Monitor Agent<br/>Progress"]
+        ControlAgent["Control Agent<br/>Operations"]
+        ReviewResults["Review Agent<br/>Results"]
         
         %% Agent Autonomous Use Cases
-        PlanGoalExecution((Plan Goal<br/>Execution))
-        ExecuteActions((Execute<br/>Actions))
-        ThinkActCycle((Perform Think-Act<br/>Cycle))
-        AccessExternalTools((Access External<br/>Tools))
+        PlanGoalExecution["Plan Goal<br/>Execution"]
+        ExecuteActions["Execute<br/>Actions"]
+        ThinkActCycle["Perform Think-Act<br/>Cycle"]
+        AccessExternalTools["Access External<br/>Tools"]
         
         %% Supporting Use Cases
-        ConfigureAgent((Configure Agent<br/>Parameters))
-        SetGoalConstraints((Set Goal<br/>Constraints))
-        PauseAgent((Pause Agent<br/>Operations))
-        ResumeAgent((Resume Agent<br/>Operations))
-        StopAgent((Stop Agent<br/>Operations))
-        ViewAgentLogs((View Agent<br/>Activity Logs))
-        ApproveAgentActions((Approve Agent<br/>Actions))
-        RefineGoal((Refine Goal<br/>Definition))
+        ConfigureAgent["Configure Agent<br/>Parameters"]
+        SetGoalConstraints["Set Goal<br/>Constraints"]
+        PauseAgent["Pause Agent<br/>Operations"]
+        ResumeAgent["Resume Agent<br/>Operations"]
+        StopAgent["Stop Agent<br/>Operations"]
+        ViewAgentLogs["View Agent<br/>Activity Logs"]
+        ApproveAgentActions["Approve Agent<br/>Actions"]
+        RefineGoal["Refine Goal<br/>Definition"]
         
         %% Background Use Cases
-        MaintainContext((Maintain Long-term<br/>Context))
-        ProcessBackgroundTasks((Process Background<br/>Tasks))
-        GenerateStatusUpdates((Generate Status<br/>Updates))
-        HandleErrors((Handle Agent<br/>Errors))
+        MaintainContext["Maintain Long-term<br/>Context"]
+        ProcessBackgroundTasks["Process Background<br/>Tasks"]
+        GenerateStatusUpdates["Generate Status<br/>Updates"]
+        HandleErrors["Handle Agent<br/>Errors"]
     end
     
     %% Primary Actor Associations
-    AgentUser ---|o DefineGoal
-    AgentUser ---|o MonitorAgent
-    AgentUser ---|o ControlAgent
-    AgentUser ---|o ReviewResults
-    AgentUser ---|o ConfigureAgent
-    AgentUser ---|o SetGoalConstraints
-    AgentUser ---|o PauseAgent
-    AgentUser ---|o ResumeAgent
-    AgentUser ---|o StopAgent
-    AgentUser ---|o ViewAgentLogs
-    AgentUser ---|o ApproveAgentActions
-    AgentUser ---|o RefineGoal
+    AgentUser --- DefineGoal
+    AgentUser --- MonitorAgent
+    AgentUser --- ControlAgent
+    AgentUser --- ReviewResults
+    AgentUser --- ConfigureAgent
+    AgentUser --- SetGoalConstraints
+    AgentUser --- PauseAgent
+    AgentUser --- ResumeAgent
+    AgentUser --- StopAgent
+    AgentUser --- ViewAgentLogs
+    AgentUser --- ApproveAgentActions
+    AgentUser --- RefineGoal
     
     %% Secondary Actor Associations (Autonomous Agent)
-    AutonomousAgent ---|o PlanGoalExecution
-    AutonomousAgent ---|o ExecuteActions
-    AutonomousAgent ---|o ThinkActCycle
-    AutonomousAgent ---|o MaintainContext
-    AutonomousAgent ---|o ProcessBackgroundTasks
-    AutonomousAgent ---|o GenerateStatusUpdates
-    AutonomousAgent ---|o HandleErrors
+    AutonomousAgent --- PlanGoalExecution
+    AutonomousAgent --- ExecuteActions
+    AutonomousAgent --- ThinkActCycle
+    AutonomousAgent --- MaintainContext
+    AutonomousAgent --- ProcessBackgroundTasks
+    AutonomousAgent --- GenerateStatusUpdates
+    AutonomousAgent --- HandleErrors
     
     %% Supporting Actor Associations
-    ExternalServices ---|o AccessExternalTools
+    ExternalServices --- AccessExternalTools
     
     %% Include Relationships
-    DefineGoal -.->|<<include>>| ConfigureAgent
-    DefineGoal -.->|<<include>>| SetGoalConstraints
-    ExecuteActions -.->|<<include>>| ThinkActCycle
-    MonitorAgent -.->|<<include>>| ViewAgentLogs
-    MonitorAgent -.->|<<include>>| GenerateStatusUpdates
+    DefineGoal -.-> ConfigureAgent
+    DefineGoal -.-> SetGoalConstraints
+    ExecuteActions -.-> ThinkActCycle
+    MonitorAgent -.-> ViewAgentLogs
+    MonitorAgent -.-> GenerateStatusUpdates
     
     %% Extend Relationships
-    DefineGoal -.->|<<extend>>| RefineGoal
-    ExecuteActions -.->|<<extend>>| AccessExternalTools
-    MonitorAgent -.->|<<extend>>| ApproveAgentActions
-    ExecuteActions -.->|<<extend>>| HandleErrors
-    ThinkActCycle -.->|<<extend>>| MaintainContext
+    DefineGoal -.-> RefineGoal
+    ExecuteActions -.-> AccessExternalTools
+    MonitorAgent -.-> ApproveAgentActions
+    ExecuteActions -.-> HandleErrors
+    ThinkActCycle -.-> MaintainContext
     
     %% Generalization
-    ControlAgent ---|> PauseAgent
-    ControlAgent ---|> ResumeAgent
-    ControlAgent ---|> StopAgent
+    ControlAgent --- PauseAgent
+    ControlAgent --- ResumeAgent
+    ControlAgent --- StopAgent
     
     %% Styling
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px

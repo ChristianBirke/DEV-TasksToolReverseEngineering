@@ -14,130 +14,130 @@ This UML use case diagram represents the system administration and technical man
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
-    SystemAdmin[👨‍💻<br/>System Administrator]
-    AIModelRouter[🧠<br/>AI Model Router]
-    ExternalProviders[🌐<br/>External AI Providers]
-    AnalyticsSystem[📊<br/>Analytics System]
+    SystemAdmin["👨‍💻<br/>System Administrator"]
+    AIModelRouter["🧠<br/>AI Model Router"]
+    ExternalProviders["🌐<br/>External AI Providers"]
+    AnalyticsSystem["📊<br/>Analytics System"]
     
     %% System boundary
     subgraph SystemBoundary["⚙️ Vectal Platform Infrastructure"]
         %% Primary Administrative Use Cases
-        ManageInfrastructure((Manage<br/>Infrastructure))
-        MonitorSystemHealth((Monitor System<br/>Health))
-        ConfigureScaling((Configure<br/>Scaling))
-        ManageSecurityPolicies((Manage Security<br/>Policies))
+        ManageInfrastructure["Manage<br/>Infrastructure"]
+        MonitorSystemHealth["Monitor System<br/>Health"]
+        ConfigureScaling["Configure<br/>Scaling"]
+        ManageSecurityPolicies["Manage Security<br/>Policies"]
         
         %% AI Model Management Use Cases
-        ConfigureModelRouting((Configure Model<br/>Routing))
-        ManageModelProviders((Manage Model<br/>Providers))
-        MonitorModelPerformance((Monitor Model<br/>Performance))
-        OptimizeModelSelection((Optimize Model<br/>Selection))
+        ConfigureModelRouting["Configure Model<br/>Routing"]
+        ManageModelProviders["Manage Model<br/>Providers"]
+        MonitorModelPerformance["Monitor Model<br/>Performance"]
+        OptimizeModelSelection["Optimize Model<br/>Selection"]
         
         %% Infrastructure Management Use Cases
-        DeployServices((Deploy<br/>Services))
-        ScaleResources((Scale<br/>Resources))
-        ManageLoadBalancing((Manage Load<br/>Balancing))
-        ConfigureNetworking((Configure<br/>Networking))
+        DeployServices["Deploy<br/>Services"]
+        ScaleResources["Scale<br/>Resources"]
+        ManageLoadBalancing["Manage Load<br/>Balancing"]
+        ConfigureNetworking["Configure<br/>Networking"]
         
         %% Security & Compliance Use Cases
-        ImplementSecurityMeasures((Implement Security<br/>Measures))
-        ManageUserAccess((Manage User<br/>Access))
-        EnsureDataPrivacy((Ensure Data<br/>Privacy))
-        HandleComplianceReporting((Handle Compliance<br/>Reporting))
+        ImplementSecurityMeasures["Implement Security<br/>Measures"]
+        ManageUserAccess["Manage User<br/>Access"]
+        EnsureDataPrivacy["Ensure Data<br/>Privacy"]
+        HandleComplianceReporting["Handle Compliance<br/>Reporting"]
         
         %% Monitoring & Analytics Use Cases
-        TrackSystemMetrics((Track System<br/>Metrics))
-        AnalyzePerformanceData((Analyze Performance<br/>Data))
-        GenerateSystemReports((Generate System<br/>Reports))
-        AlertOnSystemIssues((Alert on System<br/>Issues))
+        TrackSystemMetrics["Track System<br/>Metrics"]
+        AnalyzePerformanceData["Analyze Performance<br/>Data"]
+        GenerateSystemReports["Generate System<br/>Reports"]
+        AlertOnSystemIssues["Alert on System<br/>Issues"]
         
         %% Data Management Use Cases
-        ManageDatabases((Manage<br/>Databases))
-        BackupSystemData((Backup System<br/>Data))
-        ManageDataRetention((Manage Data<br/>Retention))
-        OptimizeDataStorage((Optimize Data<br/>Storage))
+        ManageDatabases["Manage<br/>Databases"]
+        BackupSystemData["Backup System<br/>Data"]
+        ManageDataRetention["Manage Data<br/>Retention"]
+        OptimizeDataStorage["Optimize Data<br/>Storage"]
         
         %% AI Router Autonomous Use Cases
-        RouteAIRequests((Route AI<br/>Requests))
-        SelectOptimalModel((Select Optimal<br/>Model))
-        BalanceModelLoad((Balance Model<br/>Load))
-        HandleModelFailures((Handle Model<br/>Failures))
-        CacheModelResponses((Cache Model<br/>Responses))
+        RouteAIRequests["Route AI<br/>Requests"]
+        SelectOptimalModel["Select Optimal<br/>Model"]
+        BalanceModelLoad["Balance Model<br/>Load"]
+        HandleModelFailures["Handle Model<br/>Failures"]
+        CacheModelResponses["Cache Model<br/>Responses"]
         
         %% External Integration Use Cases
-        IntegrateExternalAPIs((Integrate External<br/>APIs))
-        ManageAPICredentials((Manage API<br/>Credentials))
-        MonitorExternalServices((Monitor External<br/>Services))
-        HandleAPIRateLimits((Handle API<br/>Rate Limits))
+        IntegrateExternalAPIs["Integrate External<br/>APIs"]
+        ManageAPICredentials["Manage API<br/>Credentials"]
+        MonitorExternalServices["Monitor External<br/>Services"]
+        HandleAPIRateLimits["Handle API<br/>Rate Limits"]
     end
     
     %% Primary Actor Associations
-    SystemAdmin ---|o ManageInfrastructure
-    SystemAdmin ---|o MonitorSystemHealth
-    SystemAdmin ---|o ConfigureScaling
-    SystemAdmin ---|o ManageSecurityPolicies
-    SystemAdmin ---|o ConfigureModelRouting
-    SystemAdmin ---|o ManageModelProviders
-    SystemAdmin ---|o DeployServices
-    SystemAdmin ---|o ScaleResources
-    SystemAdmin ---|o ManageLoadBalancing
-    SystemAdmin ---|o ConfigureNetworking
-    SystemAdmin ---|o ImplementSecurityMeasures
-    SystemAdmin ---|o ManageUserAccess
-    SystemAdmin ---|o EnsureDataPrivacy
-    SystemAdmin ---|o HandleComplianceReporting
-    SystemAdmin ---|o ManageDatabases
-    SystemAdmin ---|o BackupSystemData
-    SystemAdmin ---|o ManageDataRetention
-    SystemAdmin ---|o OptimizeDataStorage
-    SystemAdmin ---|o IntegrateExternalAPIs
-    SystemAdmin ---|o ManageAPICredentials
+    SystemAdmin --- ManageInfrastructure
+    SystemAdmin --- MonitorSystemHealth
+    SystemAdmin --- ConfigureScaling
+    SystemAdmin --- ManageSecurityPolicies
+    SystemAdmin --- ConfigureModelRouting
+    SystemAdmin --- ManageModelProviders
+    SystemAdmin --- DeployServices
+    SystemAdmin --- ScaleResources
+    SystemAdmin --- ManageLoadBalancing
+    SystemAdmin --- ConfigureNetworking
+    SystemAdmin --- ImplementSecurityMeasures
+    SystemAdmin --- ManageUserAccess
+    SystemAdmin --- EnsureDataPrivacy
+    SystemAdmin --- HandleComplianceReporting
+    SystemAdmin --- ManageDatabases
+    SystemAdmin --- BackupSystemData
+    SystemAdmin --- ManageDataRetention
+    SystemAdmin --- OptimizeDataStorage
+    SystemAdmin --- IntegrateExternalAPIs
+    SystemAdmin --- ManageAPICredentials
     
     %% Secondary Actor Associations (AI Model Router)
-    AIModelRouter ---|o RouteAIRequests
-    AIModelRouter ---|o SelectOptimalModel
-    AIModelRouter ---|o BalanceModelLoad
-    AIModelRouter ---|o HandleModelFailures
-    AIModelRouter ---|o CacheModelResponses
-    AIModelRouter ---|o OptimizeModelSelection
+    AIModelRouter --- RouteAIRequests
+    AIModelRouter --- SelectOptimalModel
+    AIModelRouter --- BalanceModelLoad
+    AIModelRouter --- HandleModelFailures
+    AIModelRouter --- CacheModelResponses
+    AIModelRouter --- OptimizeModelSelection
     
     %% Supporting Actor Associations
-    ExternalProviders ---|o RouteAIRequests
-    ExternalProviders ---|o MonitorExternalServices
-    ExternalProviders ---|o HandleAPIRateLimits
+    ExternalProviders --- RouteAIRequests
+    ExternalProviders --- MonitorExternalServices
+    ExternalProviders --- HandleAPIRateLimits
     
     %% Monitoring Actor Associations
-    AnalyticsSystem ---|o TrackSystemMetrics
-    AnalyticsSystem ---|o AnalyzePerformanceData
-    AnalyticsSystem ---|o GenerateSystemReports
-    AnalyticsSystem ---|o AlertOnSystemIssues
-    AnalyticsSystem ---|o MonitorModelPerformance
-    AnalyticsSystem ---|o MonitorExternalServices
+    AnalyticsSystem --- TrackSystemMetrics
+    AnalyticsSystem --- AnalyzePerformanceData
+    AnalyticsSystem --- GenerateSystemReports
+    AnalyticsSystem --- AlertOnSystemIssues
+    AnalyticsSystem --- MonitorModelPerformance
+    AnalyticsSystem --- MonitorExternalServices
     
     %% Include Relationships
-    ManageInfrastructure -.->|<<include>>| MonitorSystemHealth
-    ManageInfrastructure -.->|<<include>>| ConfigureScaling
-    ConfigureModelRouting -.->|<<include>>| ManageModelProviders
-    RouteAIRequests -.->|<<include>>| SelectOptimalModel
-    ImplementSecurityMeasures -.->|<<include>>| ManageUserAccess
-    ManageDatabases -.->|<<include>>| BackupSystemData
+    ManageInfrastructure -.-> MonitorSystemHealth
+    ManageInfrastructure -.-> ConfigureScaling
+    ConfigureModelRouting -.-> ManageModelProviders
+    RouteAIRequests -.-> SelectOptimalModel
+    ImplementSecurityMeasures -.-> ManageUserAccess
+    ManageDatabases -.-> BackupSystemData
     
     %% Extend Relationships
-    MonitorSystemHealth -.->|<<extend>>| AlertOnSystemIssues
-    ConfigureScaling -.->|<<extend>>| ScaleResources
-    SelectOptimalModel -.->|<<extend>>| OptimizeModelSelection
-    RouteAIRequests -.->|<<extend>>| CacheModelResponses
-    ManageInfrastructure -.->|<<extend>>| OptimizeDataStorage
-    IntegrateExternalAPIs -.->|<<extend>>| HandleAPIRateLimits
+    MonitorSystemHealth -.-> AlertOnSystemIssues
+    ConfigureScaling -.-> ScaleResources
+    SelectOptimalModel -.-> OptimizeModelSelection
+    RouteAIRequests -.-> CacheModelResponses
+    ManageInfrastructure -.-> OptimizeDataStorage
+    IntegrateExternalAPIs -.-> HandleAPIRateLimits
     
     %% Generalization
-    ManageInfrastructure ---|> DeployServices
-    ManageInfrastructure ---|> ScaleResources
-    ManageInfrastructure ---|> ManageLoadBalancing
+    ManageInfrastructure --- DeployServices
+    ManageInfrastructure --- ScaleResources
+    ManageInfrastructure --- ManageLoadBalancing
     
-    ImplementSecurityMeasures ---|> ManageUserAccess
-    ImplementSecurityMeasures ---|> EnsureDataPrivacy
-    ImplementSecurityMeasures ---|> HandleComplianceReporting
+    ImplementSecurityMeasures --- ManageUserAccess
+    ImplementSecurityMeasures --- EnsureDataPrivacy
+    ImplementSecurityMeasures --- HandleComplianceReporting
     
     %% Styling
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px

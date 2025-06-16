@@ -13,91 +13,91 @@ This UML use case diagram represents how users interact with Vectal's document p
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
-    KnowledgeWorker[👤<br/>Knowledge Worker]
-    DocumentAI[🤖<br/>Document AI]
-    OCRServices[🔍<br/>OCR Services]
+    KnowledgeWorker["👤<br/>Knowledge Worker"]
+    DocumentAI["🤖<br/>Document AI"]
+    OCRServices["🔍<br/>OCR Services"]
     
     %% System boundary
     subgraph SystemBoundary["📚 Vectal Document Integration System"]
         %% Primary Use Cases
-        UploadDocument((Upload<br/>Document))
-        QueryDocument((Query<br/>Document))
-        IntegrateWithTasks((Integrate with<br/>Tasks))
-        AccessKnowledgeBase((Access Knowledge<br/>Base))
+        UploadDocument["Upload<br/>Document"]
+        QueryDocument["Query<br/>Document"]
+        IntegrateWithTasks["Integrate with<br/>Tasks"]
+        AccessKnowledgeBase["Access Knowledge<br/>Base"]
         
         %% Document Processing Use Cases
-        ExtractDocumentText((Extract Document<br/>Text))
-        ProcessDocumentContent((Process Document<br/>Content))
-        GenerateEmbeddings((Generate<br/>Embeddings))
-        CreateContextualIndex((Create Contextual<br/>Index))
+        ExtractDocumentText["Extract Document<br/>Text"]
+        ProcessDocumentContent["Process Document<br/>Content"]
+        GenerateEmbeddings["Generate<br/>Embeddings"]
+        CreateContextualIndex["Create Contextual<br/>Index"]
         
         %% AI Analysis Use Cases
-        AnalyzeDocumentContent((Analyze Document<br/>Content))
-        AnswerDocumentQuestions((Answer Document<br/>Questions))
-        SummarizeDocument((Summarize<br/>Document))
-        ExtractKeyInsights((Extract Key<br/>Insights))
+        AnalyzeDocumentContent["Analyze Document<br/>Content"]
+        AnswerDocumentQuestions["Answer Document<br/>Questions"]
+        SummarizeDocument["Summarize<br/>Document"]
+        ExtractKeyInsights["Extract Key<br/>Insights"]
         
         %% Supporting Use Cases
-        ValidateDocumentFormat((Validate Document<br/>Format))
-        ManageDocumentMetadata((Manage Document<br/>Metadata))
-        LinkDocumentToTask((Link Document<br/>to Task))
-        SearchAcrossDocuments((Search Across<br/>Documents))
-        ExportDocumentInsights((Export Document<br/>Insights))
-        DeleteDocument((Delete<br/>Document))
+        ValidateDocumentFormat["Validate Document<br/>Format"]
+        ManageDocumentMetadata["Manage Document<br/>Metadata"]
+        LinkDocumentToTask["Link Document<br/>to Task"]
+        SearchAcrossDocuments["Search Across<br/>Documents"]
+        ExportDocumentInsights["Export Document<br/>Insights"]
+        DeleteDocument["Delete<br/>Document"]
         
         %% Advanced Use Cases
-        CompareDocuments((Compare<br/>Documents))
-        TrackDocumentChanges((Track Document<br/>Changes))
-        CollaborateOnDocuments((Collaborate on<br/>Documents))
-        CreateDocumentWorkspace((Create Document<br/>Workspace))
+        CompareDocuments["Compare<br/>Documents"]
+        TrackDocumentChanges["Track Document<br/>Changes"]
+        CollaborateOnDocuments["Collaborate on<br/>Documents"]
+        CreateDocumentWorkspace["Create Document<br/>Workspace"]
     end
     
     %% Primary Actor Associations
-    KnowledgeWorker ---|o UploadDocument
-    KnowledgeWorker ---|o QueryDocument
-    KnowledgeWorker ---|o IntegrateWithTasks
-    KnowledgeWorker ---|o AccessKnowledgeBase
-    KnowledgeWorker ---|o LinkDocumentToTask
-    KnowledgeWorker ---|o SearchAcrossDocuments
-    KnowledgeWorker ---|o ExportDocumentInsights
-    KnowledgeWorker ---|o DeleteDocument
-    KnowledgeWorker ---|o CompareDocuments
-    KnowledgeWorker ---|o CollaborateOnDocuments
-    KnowledgeWorker ---|o CreateDocumentWorkspace
+    KnowledgeWorker --- UploadDocument
+    KnowledgeWorker --- QueryDocument
+    KnowledgeWorker --- IntegrateWithTasks
+    KnowledgeWorker --- AccessKnowledgeBase
+    KnowledgeWorker --- LinkDocumentToTask
+    KnowledgeWorker --- SearchAcrossDocuments
+    KnowledgeWorker --- ExportDocumentInsights
+    KnowledgeWorker --- DeleteDocument
+    KnowledgeWorker --- CompareDocuments
+    KnowledgeWorker --- CollaborateOnDocuments
+    KnowledgeWorker --- CreateDocumentWorkspace
     
     %% Secondary Actor Associations (Document AI)
-    DocumentAI ---|o ExtractDocumentText
-    DocumentAI ---|o ProcessDocumentContent
-    DocumentAI ---|o GenerateEmbeddings
-    DocumentAI ---|o CreateContextualIndex
-    DocumentAI ---|o AnalyzeDocumentContent
-    DocumentAI ---|o AnswerDocumentQuestions
-    DocumentAI ---|o SummarizeDocument
-    DocumentAI ---|o ExtractKeyInsights
+    DocumentAI --- ExtractDocumentText
+    DocumentAI --- ProcessDocumentContent
+    DocumentAI --- GenerateEmbeddings
+    DocumentAI --- CreateContextualIndex
+    DocumentAI --- AnalyzeDocumentContent
+    DocumentAI --- AnswerDocumentQuestions
+    DocumentAI --- SummarizeDocument
+    DocumentAI --- ExtractKeyInsights
     
     %% Supporting Actor Associations
-    OCRServices ---|o ExtractDocumentText
+    OCRServices --- ExtractDocumentText
     
     %% Include Relationships
-    UploadDocument -.->|<<include>>| ValidateDocumentFormat
-    UploadDocument -.->|<<include>>| ExtractDocumentText
-    UploadDocument -.->|<<include>>| ManageDocumentMetadata
-    ProcessDocumentContent -.->|<<include>>| GenerateEmbeddings
-    QueryDocument -.->|<<include>>| AnalyzeDocumentContent
-    AccessKnowledgeBase -.->|<<include>>| SearchAcrossDocuments
+    UploadDocument -.-> ValidateDocumentFormat
+    UploadDocument -.-> ExtractDocumentText
+    UploadDocument -.-> ManageDocumentMetadata
+    ProcessDocumentContent -.-> GenerateEmbeddings
+    QueryDocument -.-> AnalyzeDocumentContent
+    AccessKnowledgeBase -.-> SearchAcrossDocuments
     
     %% Extend Relationships
-    ExtractDocumentText -.->|<<extend>>| OCRServices
-    QueryDocument -.->|<<extend>>| SummarizeDocument
-    QueryDocument -.->|<<extend>>| ExtractKeyInsights
-    IntegrateWithTasks -.->|<<extend>>| LinkDocumentToTask
-    AccessKnowledgeBase -.->|<<extend>>| CompareDocuments
-    ManageDocumentMetadata -.->|<<extend>>| TrackDocumentChanges
+    ExtractDocumentText -.-> OCRServices
+    QueryDocument -.-> SummarizeDocument
+    QueryDocument -.-> ExtractKeyInsights
+    IntegrateWithTasks -.-> LinkDocumentToTask
+    AccessKnowledgeBase -.-> CompareDocuments
+    ManageDocumentMetadata -.-> TrackDocumentChanges
     
     %% Generalization
-    QueryDocument ---|> AnswerDocumentQuestions
-    QueryDocument ---|> SummarizeDocument
-    QueryDocument ---|> ExtractKeyInsights
+    QueryDocument --- AnswerDocumentQuestions
+    QueryDocument --- SummarizeDocument
+    QueryDocument --- ExtractKeyInsights
     
     %% Styling
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
