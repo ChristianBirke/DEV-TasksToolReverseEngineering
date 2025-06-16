@@ -28,6 +28,7 @@ Professional UML use case diagrams showing user goals and system functionality:
 - Define actors, use cases, and relationships following UML standards
 - Include functional specifications and business value descriptions
 - Ideal for business analysts, product managers, and requirements gathering
+- **Available formats**: Interactive Mermaid + Static PNG images for all use cases
 
 ## 📋 Diagram Collection
 
@@ -49,7 +50,7 @@ Each feature area includes both technical flowchart and UML use case diagram per
 
 **Data Flows**: User input → AI analysis → Enhanced task metadata → Progress tracking → Insights
 
-#### 🎯 [UML Use Case Diagram](./uml-01-core-task-management-use-cases.md)
+#### 🎯 [UML Use Case Diagram](./uml-01-core-task-management-use-cases.md) | [📷 PNG](./images/uml-01-core-task-management-use-cases.png)
 **Functional Focus**: User goals and system functionality for task management
 
 **Primary Actors**: Task User, AI Assistant, Analytics System
@@ -78,7 +79,7 @@ Each feature area includes both technical flowchart and UML use case diagram per
 
 **🔥 Key Differentiator**: Unlike reactive chatbots, agents work independently on complex projects
 
-#### 🎯 [UML Use Case Diagram](./uml-02-autonomous-agent-use-cases.md)
+#### 🎯 [UML Use Case Diagram](./uml-02-autonomous-agent-use-cases.md) | [📷 PNG](./images/uml-02-autonomous-agent-use-cases.png)
 **Functional Focus**: User control and autonomous agent capabilities
 
 **Primary Actors**: Agent User, Autonomous Agent, External Services
@@ -107,7 +108,7 @@ Each feature area includes both technical flowchart and UML use case diagram per
 
 **Technical Architecture**: Vector databases (Pinecone/Weaviate) + ~100k-200k token context models
 
-#### 🎯 [UML Use Case Diagram](./uml-03-document-integration-use-cases.md)
+#### 🎯 [UML Use Case Diagram](./uml-03-document-integration-use-cases.md) | [📷 PNG](./images/uml-03-document-integration-use-cases.png)
 **Functional Focus**: Document processing and knowledge management functionality
 
 **Primary Actors**: Knowledge Worker, Document AI, OCR Services
@@ -136,7 +137,7 @@ Each feature area includes both technical flowchart and UML use case diagram per
 
 **Integration Points**: Perplexity, search engines, news APIs, academic sources
 
-#### 🎯 [UML Use Case Diagram](./uml-04-web-research-use-cases.md)
+#### 🎯 [UML Use Case Diagram](./uml-04-web-research-use-cases.md) | [📷 PNG](./images/uml-04-web-research-use-cases.png)
 **Functional Focus**: Research request and information synthesis capabilities
 
 **Primary Actors**: Research User, Ultra Search AI, External APIs
@@ -165,7 +166,7 @@ Each feature area includes both technical flowchart and UML use case diagram per
 
 **Architecture**: Microservices, containerization, auto-scaling, comprehensive monitoring
 
-#### 🎯 [UML Use Case Diagram](./uml-05-system-architecture-use-cases.md)
+#### 🎯 [UML Use Case Diagram](./uml-05-system-architecture-use-cases.md) | [📷 PNG](./images/uml-05-system-architecture-use-cases.png)
 **Functional Focus**: System administration and technical management capabilities
 
 **Primary Actors**: System Administrator, AI Model Router, External Providers, Analytics System
@@ -343,11 +344,18 @@ When updating diagrams, ensure:
 - **[System Architecture](./05-system-architecture-multi-model-orchestration.md)**: Technical infrastructure
 
 ### UML Use Case Collection  
-- **[Task Management Use Cases](./uml-01-core-task-management-use-cases.md)**: User goals for task management
-- **[Autonomous Agent Use Cases](./uml-02-autonomous-agent-use-cases.md)**: Agent control and operations
-- **[Document Processing Use Cases](./uml-03-document-integration-use-cases.md)**: Knowledge management functionality
-- **[Web Research Use Cases](./uml-04-web-research-use-cases.md)**: Research request capabilities
-- **[System Administration Use Cases](./uml-05-system-architecture-use-cases.md)**: Technical management functions
+- **[Task Management Use Cases](./uml-01-core-task-management-use-cases.md)**: User goals for task management | [📷 PNG](./images/uml-01-core-task-management-use-cases.png)
+- **[Autonomous Agent Use Cases](./uml-02-autonomous-agent-use-cases.md)**: Agent control and operations | [📷 PNG](./images/uml-02-autonomous-agent-use-cases.png)
+- **[Document Processing Use Cases](./uml-03-document-integration-use-cases.md)**: Knowledge management functionality | [📷 PNG](./images/uml-03-document-integration-use-cases.png)
+- **[Web Research Use Cases](./uml-04-web-research-use-cases.md)**: Research request capabilities | [📷 PNG](./images/uml-04-web-research-use-cases.png)
+- **[System Administration Use Cases](./uml-05-system-architecture-use-cases.md)**: Technical management functions | [📷 PNG](./images/uml-05-system-architecture-use-cases.png)
+
+### 🖼️ Static Image Collection
+All UML diagrams are also available as high-resolution PNG images in the [`images/`](./images/) directory for:
+- **Presentations**: High-quality images for slides and reports
+- **Offline Documentation**: When interactive rendering isn't available  
+- **Print Materials**: Professional documentation and handouts
+- **Quick Reference**: Fast viewing without loading interactive diagrams
 
 ## 📞 Support
 

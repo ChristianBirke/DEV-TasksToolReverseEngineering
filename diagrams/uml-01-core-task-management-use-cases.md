@@ -12,6 +12,8 @@ This UML use case diagram represents the primary productivity workflow where use
 
 > **📊 Interactive Diagram**: View this diagram interactively on [MermaidChart](https://www.mermaidchart.com/app/projects/4d053b61-5dce-4876-9af3-d1e11b7a8944/diagrams/ddad8693-42fb-4228-a026-a70599548cfd/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiZGRhZDg2OTMtNDJmYi00MjI4LWEwMjYtYTcwNTk5NTQ4Y2ZkIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc1MDA2NDA5M30.Y_NVG6n5Dfx9dR-T8X-RTnGtB-BBSaUw3aZRiXZinoA)
 
+> **🖼️ Static Image**: ![Core Task Management UML Diagram](./images/uml-01-core-task-management-use-cases.png)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)

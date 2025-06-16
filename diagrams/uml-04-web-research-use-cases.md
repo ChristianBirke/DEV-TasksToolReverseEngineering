@@ -10,6 +10,8 @@ This UML use case diagram represents how users interact with Vectal's AI-powered
 ## System Boundary
 **Vectal Ultra Search System** - AI-powered web research and information synthesis platform
 
+> **🖼️ Static Image**: ![Web Research UML Diagram](./images/uml-04-web-research-use-cases.png)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)

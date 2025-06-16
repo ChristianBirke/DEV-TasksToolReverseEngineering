@@ -10,6 +10,8 @@ This UML use case diagram represents Vectal's flagship capability where users ca
 ## System Boundary
 **Vectal Autonomous Agent System** - 24/7 AI agent orchestration platform
 
+> **🖼️ Static Image**: ![Autonomous Agent UML Diagram](./images/uml-02-autonomous-agent-use-cases.png)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)

@@ -11,6 +11,8 @@ This UML use case diagram represents the system administration and technical man
 ## System Boundary
 **Vectal Platform Infrastructure** - Multi-model AI orchestration and scalable system architecture
 
+> **🖼️ Static Image**: ![System Architecture UML Diagram](./images/uml-05-system-architecture-use-cases.png)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)

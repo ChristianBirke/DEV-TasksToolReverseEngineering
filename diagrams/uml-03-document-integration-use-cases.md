@@ -10,6 +10,8 @@ This UML use case diagram represents how users interact with Vectal's document p
 ## System Boundary
 **Vectal Document Integration System** - AI-powered document processing and knowledge management platform
 
+> **🖼️ Static Image**: ![Document Integration UML Diagram](./images/uml-03-document-integration-use-cases.png)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
