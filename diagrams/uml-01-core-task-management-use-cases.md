@@ -10,63 +10,65 @@ This UML use case diagram represents the primary productivity workflow where use
 ## System Boundary
 **Vectal Task Management System** - AI-powered productivity platform
 
+> **📊 Interactive Diagram**: View this diagram interactively on [MermaidChart](https://www.mermaidchart.com/app/projects/4d053b61-5dce-4876-9af3-d1e11b7a8944/diagrams/ddad8693-42fb-4228-a026-a70599548cfd/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiZGRhZDg2OTMtNDJmYi00MjI4LWEwMjYtYTcwNTk5NTQ4Y2ZkIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc1MDA2NDA5M30.Y_NVG6n5Dfx9dR-T8X-RTnGtB-BBSaUw3aZRiXZinoA)
+
 ```mermaid
 graph TB
     %% Actors (outside system boundary)
-    TaskUser[👤<br/>Task User]
-    AIAssistant[🤖<br/>AI Assistant]
-    AnalyticsSystem[📊<br/>Analytics System]
+    TaskUser["👤<br/>Task User"]
+    AIAssistant["🤖<br/>AI Assistant"]
+    AnalyticsSystem["📊<br/>Analytics System"]
     
     %% System boundary
     subgraph SystemBoundary["🎯 Vectal Task Management System"]
         %% Primary Use Cases
-        CreateTask((Create Task))
-        ManageTask((Manage Task))
-        TrackProgress((Track Progress))
-        ViewAnalytics((View Analytics))
+        CreateTask("Create Task")
+        ManageTask("Manage Task")
+        TrackProgress("Track Progress")
+        ViewAnalytics("View Analytics")
         
         %% AI-Enhanced Use Cases
-        GetTaskSuggestions((Get Task<br/>Suggestions))
-        BreakdownComplexTask((Breakdown<br/>Complex Task))
-        PrioritizeTasks((Prioritize<br/>Tasks))
-        ReceiveContextualHelp((Receive<br/>Contextual Help))
+        GetTaskSuggestions("Get Task<br/>Suggestions")
+        BreakdownComplexTask("Breakdown<br/>Complex Task")
+        PrioritizeTasks("Prioritize<br/>Tasks")
+        ReceiveContextualHelp("Receive<br/>Contextual Help")
         
         %% Supporting Use Cases
-        AddTaskContext((Add Task<br/>Context))
-        SetTaskDeadlines((Set Task<br/>Deadlines))
-        MarkTaskComplete((Mark Task<br/>Complete))
-        AccessTaskHistory((Access Task<br/>History))
+        AddTaskContext("Add Task<br/>Context")
+        SetTaskDeadlines("Set Task<br/>Deadlines")
+        MarkTaskComplete("Mark Task<br/>Complete")
+        AccessTaskHistory("Access Task<br/>History")
     end
     
     %% Primary Actor Associations
-    TaskUser ---|o CreateTask
-    TaskUser ---|o ManageTask
-    TaskUser ---|o TrackProgress
-    TaskUser ---|o ViewAnalytics
-    TaskUser ---|o AddTaskContext
-    TaskUser ---|o SetTaskDeadlines
-    TaskUser ---|o MarkTaskComplete
-    TaskUser ---|o AccessTaskHistory
+    TaskUser --- CreateTask
+    TaskUser --- ManageTask
+    TaskUser --- TrackProgress
+    TaskUser --- ViewAnalytics
+    TaskUser --- AddTaskContext
+    TaskUser --- SetTaskDeadlines
+    TaskUser --- MarkTaskComplete
+    TaskUser --- AccessTaskHistory
     
     %% Secondary Actor Associations
-    AIAssistant ---|o GetTaskSuggestions
-    AIAssistant ---|o BreakdownComplexTask
-    AIAssistant ---|o PrioritizeTasks
-    AIAssistant ---|o ReceiveContextualHelp
+    AIAssistant --- GetTaskSuggestions
+    AIAssistant --- BreakdownComplexTask
+    AIAssistant --- PrioritizeTasks
+    AIAssistant --- ReceiveContextualHelp
     
     %% Supporting Actor Associations
-    AnalyticsSystem ---|o ViewAnalytics
-    AnalyticsSystem ---|o TrackProgress
+    AnalyticsSystem --- ViewAnalytics
+    AnalyticsSystem --- TrackProgress
     
     %% Include Relationships
-    CreateTask -.->|<<include>>| AddTaskContext
-    ManageTask -.->|<<include>>| GetTaskSuggestions
-    CreateTask -.->|<<include>>| PrioritizeTasks
+    CreateTask -.-> AddTaskContext
+    ManageTask -.-> GetTaskSuggestions
+    CreateTask -.-> PrioritizeTasks
     
     %% Extend Relationships
-    CreateTask -.->|<<extend>>| BreakdownComplexTask
-    ManageTask -.->|<<extend>>| ReceiveContextualHelp
-    TrackProgress -.->|<<extend>>| ViewAnalytics
+    CreateTask -.-> BreakdownComplexTask
+    ManageTask -.-> ReceiveContextualHelp
+    TrackProgress -.-> ViewAnalytics
     
     %% Styling
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
